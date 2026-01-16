@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Mandacaru Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="home.html" class="btn-back-home">
+        <svg viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.82757 16.97L18.9696 31.112L16.1416 33.94L0.585573 18.384C0.210631 18.0089 0 17.5003 0 16.97C0 16.4397 0.210631 15.9311 0.585573 15.556L16.1416 0L18.9696 2.828L4.82757 16.97Z" fill="currentColor"/>
+        </svg>
+        Retornar a página inicial
+    </a>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-container">
+                <a href="home.html">
+                    <img src="assets/logo.png" alt="Mandacaru Games Logo" class="logo">
+                </a>
+                <h1 class="company-name">Mandacaru Games</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="cadastro.html" class="btn-signup">Cadastre-se</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="cadastro-hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content-centered">
+                <div class="hero-big-title">
+                    Faça parte do nosso sonho!
+                </div>
+                <div class="hero-subtitle">
+                    Cadastre-se para se tornar parte da nossa família!
+                </div>
+                <div class="hero-link-policy">
+                    Política de Privacidade
+                </div>
+            </div>
+        </section>
+
+        <section class="form-layout-section">
+            <div class="container">
+                
+                <div class="form-main-title">
+                    Formulário de Preenchimento
+                </div>
+
+                <form id="cadastroForm" class="styled-form" autocomplete="off">
+                    <div class="forms-grid">
+                        <div class="form-column-left">
+                            <h3 class="input-label-text" style="font-size: 24px; font-weight: 400; margin-bottom: 30px; text-align: center;">Informações Pessoais</h3>
+                            
+                            <div class="input-group">
+                                <label for="nome" class="input-label-text">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" class="styled-input" placeholder="Digite seu nome completo (Máx 50 caracteres)" maxlength="50">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email" class="input-label-text">E-mail</label>
+                                <input type="email" id="email" name="email" class="styled-input" placeholder="exemplo@dominio.com">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="foto" class="input-label-text">Foto</label>
+                                <div class="styled-input" style="display: flex; align-items: center; position: relative;">
+                                    <span style="color: #575757;">Adicione uma foto até 5MB</span>
+                                    <input type="file" id="foto" name="foto" style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+    <label for="senha" class="input-label-text">Crie sua senha</label>
+    <div style="position: relative;">
+        <input type="password" id="senha" name="senha" class="styled-input" placeholder="Crie uma senha forte" maxlength="50" style="padding-right: 40px;">
+        
+        <span id="toggleSenha" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #575757;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+        </span>
+    </div>
+</div>
+
+<div class="password-requirements-list" style="margin-bottom: 20px; margin-top: 5px">
+    <div id="req-tamanho" class="error-text-red">A senha deve possuir 10 caracteres.</div>
+    <div id="req-maiuscula" class="error-text-red">A senha deve possuir letras maiúsculas.</div>
+    <div id="req-numero" class="error-text-red">A senha deve possuir números.</div>
+    <div id="req-especial" class="error-text-red">A senha deve possuir caracteres especiais (apenas *, ;, # são permitidos).</div>
+</div>
+
+                            <div class="input-group">
+    <label for="senha-confirm" class="input-label-text">Repita sua senha</label>
+    <div style="position: relative;">
+        <input type="password" id="senha-confirm" name="senha_confirm" class="styled-input" placeholder="Digite a senha criada anteriormente" maxlength="50" style="padding-right: 40px;">
+        
+        <span id="toggleSenhaConfirm" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #575757;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+        </span>
+    </div>
+    
+    <div style="margin-bottom: 20px; margin-top: 5px">
+        <div id="req-iguais" class="error-text-red">A senha digitada deve ser igual a anterior.</div>
+    </div>
+</div>
+                        </div>
+
+                        <div class="form-column-right">
+                            <h3 class="input-label-text" style="font-size: 24px; font-weight: 400; margin-bottom: 30px; text-align: center;">Endereço</h3>
+
+                            <div class="input-group">
+                                <label for="cep" class="input-label-text">CEP</label>
+                                <input type="text" id="cep" name="cep" class="styled-input" placeholder="00000-000" maxlength="9">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="rua" class="input-label-text">Rua</label>
+                                <input type="text" id="rua" name="rua" class="styled-input" placeholder="Digite sua rua">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="numero" class="input-label-text">Número</label>
+                                <input type="text" id="numero" name="numero" class="styled-input" placeholder="Número">
+                            </div>
+
+                            <label class="checkbox-wrapper-styled">
+                                <input type="checkbox" id="sem-numero" class="hidden-checkbox-input">
+                                <div class="checkbox-icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 18C1.45 18 0.979333 17.8043 0.588 17.413C0.196667 17.0217 0.000666667 16.5507 0 16V2C0 1.45 0.196 0.979333 0.588 0.588C0.98 0.196667 1.45067 0.000666667 2 0H16C16.55 0 17.021 0.196 17.413 0.588C17.805 0.98 18.0007 1.45067 18 2V16C18 16.55 17.8043 17.021 17.413 17.413C17.0217 17.805 16.5507 18.0007 16 18H2ZM2 16H16V2H2V16Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <span>Não se aplica</span>
+                            </label>
+                            
+                            <div class="input-group">
+                                <label for="bairro" class="input-label-text">Bairro</label>
+                                <input type="text" id="bairro" name="bairro" class="styled-input" placeholder="Seu bairro">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="cidade" class="input-label-text">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" class="styled-input" placeholder="Sua cidade">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="estado" class="input-label-text">Estado (UF)</label>
+                                <input type="text" id="estado" name="estado" class="styled-input" placeholder="UF" maxlength="2" style="text-transform: uppercase;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-footer-actions">
+                        <p>Você autoriza a utilização de seu nome e foto para integrar nossos membros no site?</p>
+                        <div style="display: flex; gap: 30px; margin-bottom: 20px;">
+                            <label style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <input type="radio" name="autoriza" value="sim" checked style="accent-color: var(--primary-green);"> Sim
+                            </label>
+                            <label style="cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <input type="radio" name="autoriza" value="nao" style="accent-color: var(--primary-green);"> Não
+                            </label>
+                        </div>
+
+                        <div class="btn-action-container">
+                            <button type="button" id="btnLimpar" style="background: none; border: none; padding: 0; cursor: pointer;">
+                                <div class="BotO">Limpar</div>
+                            </button>
+                            <button type="submit" id="btnEnviar" style="background: none; border: none; padding: 0; cursor: pointer;">
+                                <div class="BotO">Enviar</div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-overlay"></div>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <img src="assets/logo.png" alt="Mandacaru Games Logo" class="footer-logo-big">
+            </div>
+            <div class="footer-right">
+                <p class="footer-headline">
+                    Como nossas equipes e criatividade estão moldando as histórias, conexões e comunidades que definem o futuro dos jogos.
+                </p>
+                <div class="footer-actions">
+                    <a href="#" class="btn-footer">Saiba mais</a>
+                    <a href="#" class="btn-footer">Leia o relatório</a>
+                </div>
+                <div class="footer-legal-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Informação legal e de privacidade</a>
+                    <a href="#">Contrato do Usuário</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Atualizações do serviço online de segurança</a>
+                </div>
+                <p class="footer-copyright" style="text-align: center; margin-top: 20px;">© 2026 Mandacaru Games Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scrypt.js"></script>
+</body>
+</html>
